@@ -1,0 +1,36 @@
+<section class="login flex justify-center pt-24">
+    <div class="w-full max-w-lg"> 
+        <form action="/login" method="POST" class="bg-white shadow-md rounded px-12 pt-10 pb-12 mb-6"> 
+            <% if(messages.error) { %>
+                <span class="text-red-500 text-sm"><%= messages.error%></span>
+                <% } %>
+            <div class="mb-6"> 
+                <label class="block text-gray-700 text-sm font-bold mb-4" for="username"> 
+                    Email
+                </label>
+                <input name="email"
+                    class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="email" placeholder="Enter your email">
+            </div>
+            <div class="mb-10"> 
+                <label class="block text-gray-700 text-sm font-bold mb-4" for="password"> 
+                    Password
+                </label>
+                <input name="password"
+                    class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 mb-4 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="******************">
+            </div>
+            <div class="flex items-center justify-between mb-2"> 
+                <button
+                    class="btn-primary rounded-full text-white font-bold py-3 px-6 rounded focus:outline-none focus:shadow-outline"type="submit">
+                    Log In
+                </button>
+                <a class="inline-block align-baseline font-bold text-sm" href="/register">
+                    Don't have account?
+                </a>
+            </div>
+        </form>
+        <p class="text-center text-gray-500 text-xs">
+            &copy;2024 priyanshiir. All rights reserved.
+        </p>
+    </div>
+</section>
+
